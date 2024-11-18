@@ -1,0 +1,18 @@
+//DSA_KEY_Gen.java 
+import java.security.*;  
+public class DSA_KEY_Gen  
+{ 
+public static void main (String[] argv) 
+throws Exception { 
+//To do code application logic here  
+//Generate a 1024 -bit Digital Signature Algorithm (DSA) key pair  
+KeyPairGenerator keygenerator = KeyPairGenerator.getInstance("DSA");  
+keygenerator.initialize(1024);  
+KeyPair 
+myKey=keygenerator.generateKeyPair();  
+PrivateKey privateKey=myKey.getPrivate();  
+ 
+System.out.println(privateKey);  
+PublicKey publickey=myKey.getPublic();  
+System.out.println(publickey); } 
+}  
